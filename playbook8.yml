@@ -1,0 +1,9 @@
+- name: Using of host scope varibles
+  hosts: 172.31.14.142
+  tasks:
+   - name: Install firewall
+     apt:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
+

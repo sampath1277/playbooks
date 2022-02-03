@@ -1,0 +1,13 @@
+- name: Create a user and copy passwd file
+  hosts: all
+  tasks:
+    - name: Create a new user
+      user:
+       name: sampath
+       password: devops
+       uid: 6779
+       home: /home/sampath
+    - name: Copy the password file in to home directory
+      copy:
+       src: /etc/passwd
+       dest: /home/sampath      

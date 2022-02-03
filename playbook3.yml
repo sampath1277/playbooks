@@ -1,0 +1,11 @@
+- name: Configure the apache2
+  hosts: all 
+  tasks:
+   - name: Insatll apache2
+     apt:
+      name: apache2
+      state: present
+   - name: Edit index.html
+     copy:
+      content: "welcome to playbooks"
+      dest: /var/www/html/index.html

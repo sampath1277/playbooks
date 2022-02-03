@@ -1,0 +1,9 @@
+- name: Using host scope varibles
+  hosts: webserver
+  tasks:
+   - name: Install tree
+     apt:
+      name: "{{f}}"
+      state: "{{g}}"
+      update_cache: "{{h}}"
+
